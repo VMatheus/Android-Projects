@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_adicionar_aparelho"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.matheus.cunsumoeletrico.AdicionarAparelhoActivity"
+    tools:showIn="@layout/activity_adicionar_aparelho"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/eletronicos" />
+
+        <TextView
+            android:text="Selecione um comodo:"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Spinner
+
+            android:id="@+id/comodo_spinner2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp" />
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputLayoutNomeAparelho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/editNomeaparelho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/aparelho"
+                android:maxLength="16"
+                android:maxLines="1" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputLayoutPotenciaAparelho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <EditText
+                android:id="@+id/editPotencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/potencia"
+                android:maxLength="16"
+                android:maxLines="1" />
+
+
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+        android:id="@+id/buttonSalvarAparelho"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Salvar"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:textColor="#FFFFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
+

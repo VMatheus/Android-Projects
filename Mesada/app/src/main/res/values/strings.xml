@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Mesada</string>
+    <string name="dados">Dados</string>
+    <string name="saldo">Saldo</string>
+    <string name="campo_obrigatorio">Vazio!</string>
+    <string name="cadastrado">Cadastrado!</string>
+    <string name="erro">Erro</string>
+    <string name="adicionar_filho">Adicionar Filho</string>
+    <string name="adicionar_regra">Adicionar Regra </string>
+    <string name="lista_regras">Lista de Regras</string>
+    <string name="lista_filhos">Lista de Filhos</string>
+    <string name="administrar">Administrar</string>
+    <string name="inicio">Inicio</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_add_regra">AddRegra</string>
+    <string name="title_activity_lista_regras">ListaRegras</string>
+    <string name="title_activity_lista_filhos">ListaFilhos</string>
+    <string name="nome">Nome</string>
+    <string name="title_activity_adm">Adm</string>
+    <string name="title_activity_bonus">BonusActivity</string>
+    <string name="atualizar">Atualizar Regra</string>
+    <string name="title_activity_splash__screen">Splash_Screen</string>
+
+</resources>

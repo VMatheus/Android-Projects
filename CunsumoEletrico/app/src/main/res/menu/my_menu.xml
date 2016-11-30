@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/add_comodo"
+        android:title="@string/adicionar_comodo">
+
+    </item>
+    <item
+        android:id="@+id/add_aparelho"
+        android:title="Adicionar aparelho" />
+
+    <item
+        android:id="@+id/visualizar_lista_de_aparelhos"
+        android:title="Lista de aparelhos gerais" />
+</menu>

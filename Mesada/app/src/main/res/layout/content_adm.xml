@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:andoid="http://schemas.android.com/apk/res/android"
+    andoid:layout_width="match_parent"
+    andoid:layout_height="match_parent"
+    andoid:paddingTop="52dp"
+
+    andoid:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        andoid:id="@+id/adm_recycle_view"
+        andoid:layout_width="match_parent"
+
+        andoid:layout_height="match_parent"
+        andoid:layout_margin="5dp"
+        andoid:scrollbars="vertical" />
+
+
+</LinearLayout>
