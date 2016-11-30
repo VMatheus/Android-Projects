@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 
 import dao.RegraDAO;
@@ -21,27 +22,34 @@ public class AddRegra extends AppCompatActivity {
     private RegraDAO regraDAO;
     private Regra regra;
     private  int idregra;
+    private Button buttonSalvarRegra;
     private TextInputLayout inputLayoutDescricao, inputLayoutValor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_regra);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_addregra);
+
 
 
         regraDAO = new RegraDAO(this);
-        editDescricao = (EditText) findViewById(R.id.edtdescricao);
+        editDescricao = (EditText) findViewById(R.id.edtDescricao);
         editValor = (EditText) findViewById(R.id.edtValor);
         inputLayoutDescricao = (TextInputLayout) findViewById(R.id.inputLayoutDescricao);
         inputLayoutValor = (TextInputLayout) findViewById(R.id.inputLayoutValor);
+        buttonSalvarRegra = (Button) findViewById(R.id.buttonSalvarRegra);
 
 
         editDescricao.addTextChangedListener(new MyTextWatcher(editDescricao));
         editValor.addTextChangedListener(new MyTextWatcher(editValor));
 
-
+        buttonSalvarRegra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cadastrar();
+                finish();
+            }
+        });
         //Carregar Regra Para ser Alterada
         idregra = getIntent().getIntExtra("ID_REGRA", 0);
 
@@ -56,27 +64,9 @@ public class AddRegra extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_default, menu);
-        return true;
 
 
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem) {
-        int id = menuItem.getItemId();
-        switch (id) {
-            case R.id.action_salvar:
-                this.cadastrar();
-                break;
-
-        }
-        return super.onOptionsItemSelected(menuItem);
-
-
-    }
 
     @Override
     protected void onDestroy() {
@@ -167,7 +157,7 @@ public class AddRegra extends AppCompatActivity {
 
         public void afterTextChanged(Editable editable) {
             switch (view.getId()) {
-                case R.id.edtdescricao:
+                case R.id.edtDescricao:
                     verificaCampoDescricao();
                     break;
                 case R.id.edtValor:

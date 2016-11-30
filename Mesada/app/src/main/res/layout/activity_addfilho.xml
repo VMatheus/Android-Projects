@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -52,7 +53,7 @@
                         android:layout_height="wrap_content"
 
                         android:drawableTint="#FF4081"
-                        android:hint="Descrição"
+                        android:hint="Nome"
                         android:inputType="textPersonName"
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
@@ -63,20 +64,20 @@
                     android:layout_height="wrap_content">
 
                     <EditText
-                        android:id="@+id/edtValor"
+                        android:id="@+id/edtSaldo"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:drawableTint="#FF4081"
 
-                        android:hint="Valor a ser descontado"
+                        android:hint="Saldo inicial"
                         android:inputType="numberDecimal|number"
                         android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
 
 
                 <Button
-                    android:id="@+id/buttonSalvarRegra"
+                    android:id="@+id/buttonSalvarFilho"
                     style="@style/Base.Widget.AppCompat.Button.Colored"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -93,13 +94,13 @@
         <ImageView
             android:id="@+id/profile_image"
 
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_alignTop="@+id/login_title"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="36dp"
-            android:src="@drawable/regras"
+
             android:elevation="4dp"
-             />
+            android:src="@drawable/user_profile_personal" />
     </RelativeLayout>
 </ScrollView>
