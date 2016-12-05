@@ -16,9 +16,10 @@
     <string name="title_activity_lista_regras">ListaRegras</string>
     <string name="title_activity_lista_filhos">ListaFilhos</string>
     <string name="nome">Nome</string>
-    <string name="title_activity_adm">Adm</string>
-    <string name="title_activity_bonus">BonusActivity</string>
+    <string name="title_activity_adm">Administrar</string>
+    <string name="title_activity_bonus">+Bonus</string>
     <string name="atualizar">Atualizar Regra</string>
     <string name="title_activity_splash__screen">Splash_Screen</string>
+    <string name="atualizado">Atualizado</string>
 
 </resources>

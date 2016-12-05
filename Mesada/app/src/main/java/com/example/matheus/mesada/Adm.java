@@ -69,26 +69,4 @@ public class Adm extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_default, menu);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem menuItem) {
-        int id = menuItem.getItemId();
-        switch (id) {
-            case R.id.action_salvar:
-
-
-                break;
-
-        }
-        return super.onOptionsItemSelected(menuItem);
-
-    }
-
-
 }

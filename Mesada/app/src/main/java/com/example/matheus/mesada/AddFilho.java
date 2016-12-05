@@ -6,7 +6,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -55,7 +58,7 @@ public class AddFilho extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_addfilho2);
+        setContentView(R.layout.activity_addfilho);
 
 
         filhoDAO = new FilhoDAO(this);
@@ -150,7 +153,7 @@ public class AddFilho extends AppCompatActivity {
                     Matrix matrix = new Matrix();
                     matrix.postScale(scaleWidth, scaleHeight);
                     // rotate the Bitmap
-                    matrix.postRotate(90);
+                    //matrix.postRotate(90);
                     // recreate the new Bitmap
                     bitmapfinal = Bitmap.createBitmap(bitmap, 0, 0,
                             width, height, matrix, true);
@@ -249,6 +252,7 @@ public class AddFilho extends AppCompatActivity {
         filhoDAO.salvar(filho);
 
         Mensagem.Msg(this, getString(R.string.cadastrado));
+
         saveBitmapSD(bitmapfinal);
         finish();
 

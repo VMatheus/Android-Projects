@@ -1,5 +1,6 @@
 package com.example.matheus.mesada;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +22,7 @@ public class AddRegra extends AppCompatActivity {
     private EditText editDescricao, editValor;
     private RegraDAO regraDAO;
     private Regra regra;
-    private  int idregra;
+    private int idregra;
     private Button buttonSalvarRegra;
     private TextInputLayout inputLayoutDescricao, inputLayoutValor;
 
@@ -29,7 +30,6 @@ public class AddRegra extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addregra);
-
 
 
         regraDAO = new RegraDAO(this);
@@ -43,29 +43,27 @@ public class AddRegra extends AppCompatActivity {
         editDescricao.addTextChangedListener(new MyTextWatcher(editDescricao));
         editValor.addTextChangedListener(new MyTextWatcher(editValor));
 
-        buttonSalvarRegra.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                cadastrar();
-                finish();
-            }
-        });
         //Carregar Regra Para ser Alterada
         idregra = getIntent().getIntExtra("ID_REGRA", 0);
-
-        if (idregra > 0){
+        if (idregra > 0) {
             Regra model = regraDAO.buscaPorId(idregra);
-            editDescricao.setText(model.getDescricao());;
+            editDescricao.setText(model.getDescricao());
+            ;
             editValor.setText(model.getValor());
             setTitle(getString(R.string.atualizar));
         }
 
 
+        buttonSalvarRegra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cadastrar();
+
+            }
+        });
+
+
     }
-
-
-
-
 
 
     @Override
@@ -125,13 +123,24 @@ public class AddRegra extends AppCompatActivity {
         regra.setDescricao(descricao);
         regra.setValor(valor);
 
-        regraDAO.salvar(regra);
 
+        if (idregra > 0) {
+            regra.set_id(idregra);
+        }
+        long res = regraDAO.salvar(regra);
+        if (res != -1) {
+            if (idregra > 0) {
+                Mensagem.Msg(this, getString(R.string.atualizado));
+            } else {
+                Mensagem.Msg(this, getString(R.string.cadastrado));
 
-        Mensagem.Msg(this, getString(R.string.cadastrado));
-        finish();
+            }
+            finish();
+            startActivity(new Intent(this, ListaRegras.class));
 
-
+        }else{
+            Mensagem.Msg(this, getString(R.string.erro));
+        }
     }
 
     public class MyTextWatcher implements TextWatcher {

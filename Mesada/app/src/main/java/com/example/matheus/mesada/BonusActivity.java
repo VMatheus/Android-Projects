@@ -50,6 +50,7 @@ public class BonusActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 capturadados();
+                finish();
 
             }
         });

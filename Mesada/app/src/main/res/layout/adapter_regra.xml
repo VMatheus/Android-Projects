@@ -7,6 +7,8 @@
     <TextView
 
         android:id="@+id/regra_lista_descricao"
+        android:padding="16dp"
+        android:text="Deixar roupas jogadas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
@@ -20,6 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="5dp"
+
+
 
 
         android:gravity="bottom|end"

@@ -59,7 +59,7 @@ public class RegraAdapter extends BaseAdapter {
 
 
         TextView textViewValor = (TextView) view.findViewById(R.id.regra_lista_valor);
-        textViewValor.setText(regra.getValor());
+        textViewValor.setText("-R$ "+regra.getValor());
 
         return view;
     }
