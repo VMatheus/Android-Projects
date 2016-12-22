@@ -3,6 +3,7 @@ package com.example.matheus.mesada;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -30,12 +31,23 @@ public class  ListaRegras extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_lista_regras);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         alertDialog = Mensagem.criarAlertDialogRegras(this);
         alertconfirmacao = Mensagem.criarDialogConfirmacao(this);
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fabNewRegra);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              adicionar();
+            }
+        });
 
 
         regraDAO = new RegraDAO(this);
@@ -44,6 +56,12 @@ public class  ListaRegras extends AppCompatActivity implements AdapterView.OnIte
         lista = (ListView) findViewById(R.id.list_regra);
         lista.setAdapter(regraAdapter);
         lista.setOnItemClickListener(this);
+
+    }
+
+    private void adicionar() {
+    Intent it = new Intent(this, AddRegra.class);
+        startActivity(it);
 
     }
 

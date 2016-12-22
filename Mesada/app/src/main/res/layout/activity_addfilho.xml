@@ -3,6 +3,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#5fb0c9">
 
     <RelativeLayout
@@ -19,7 +20,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginTop="22dp"
             android:gravity="center_horizontal"
-            android:text="Dados"
+
             android:textColor="#fff"
             android:textSize="26sp"
             android:textStyle="bold" />
@@ -48,6 +49,8 @@
                     android:layout_height="wrap_content">
 
                     <EditText
+                        android:drawableLeft="@drawable/ic_user_text_view"
+
                         android:id="@+id/edtNome"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
@@ -91,17 +94,31 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
 
-
+        <ImageView
+            android:background="@drawable/image_shape"
+            android:id="@+id/result_image"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_alignTop="@+id/login_title"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="36dp"
-
             android:elevation="4dp"
-            android:src="@drawable/user_profile_personal" />
+            android:src="@drawable/ic_action_profile"
+
+
+            android:scaleType="centerInside"
+            android:layout_marginTop="2dp"
+            android:layout_alignTop="@+id/login_title"
+            android:layout_centerHorizontal="true" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/ic_add_photo"
+            app:layout_anchor="@id/result_image"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_alignBottom="@+id/result_image"
+            android:layout_alignRight="@+id/result_image"
+            android:layout_alignEnd="@+id/result_image" />
     </RelativeLayout>
 </ScrollView>

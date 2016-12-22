@@ -35,6 +35,8 @@ public class ListaFilhos extends AppCompatActivity implements AdapterView.OnItem
         setSupportActionBar(toolbar);
         alertDialog = Mensagem.criarAlertDialog(this);
         alertConfirmacao = Mensagem.criarDialogConfirmacao(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         filhoDAO = new FilhoDAO(this);
         filhoList = filhoDAO.listaFilhos();

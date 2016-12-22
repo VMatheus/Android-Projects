@@ -16,11 +16,15 @@
 
 
 
-
+<TextView
+    android:layout_width="match_parent"
+    android:text="Desenvolvido por:"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content" />
     <ImageView
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/logo_splesh" />
+        android:layout_height="match_parent"
+        android:src="@drawable/logotecnoia" />
 </RelativeLayout>

@@ -4,45 +4,56 @@
     android:layout_height="match_parent"
     android:padding="5dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/imagem_lista"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@color/cardview_dark_background"
-
-            android:fontFamily="sans-serif-thin"
-            android:gravity="center"
-
-            android:textAllCaps="true"
-            android:textColor="#FFF"
-            android:textSize="32sp" />
-
-        <TextView
-            android:id="@+id/filho_lista_nome"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@id/imagem_lista"
-            android:paddingLeft="5dp"
-            android:textSize="17sp"
-            android:paddingRight="5dp"
-            android:paddingTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp">
 
-            android:textStyle="bold" />
+            <ImageView
 
-        <TextView
-            android:id="@+id/filho_lista_saldo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/filho_lista_nome"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_toRightOf="@id/imagem_lista"
-            android:padding="5dp" />
-    </RelativeLayout>
+                android:id="@+id/imagem_adapter_filho"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+
+                android:background="@drawable/image_shape"
+
+
+                android:gravity="center"
+
+                android:textAllCaps="true"
+                android:textColor="#FFF"
+                android:textSize="32sp" />
+
+            <TextView
+
+                android:id="@+id/nome_adapter_filho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/imagem_adapter_filho"
+                android:paddingLeft="5dp"
+                android:textSize="17sp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/saldo_adapter_filho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nome_adapter_filho"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/imagem_adapter_filho"
+                android:padding="5dp" />
+        </RelativeLayout>
+
+
+
+
+
 </RelativeLayout>

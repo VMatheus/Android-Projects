@@ -76,6 +76,8 @@ public class AdministrarAdapter extends RecyclerView.Adapter<AdministrarAdapter.
                 Intent it = new Intent(mcontext, ListaFilhos.class);
                 mcontext.startActivity(it.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 
+
+
             }
         });
 
@@ -114,6 +116,8 @@ public class AdministrarAdapter extends RecyclerView.Adapter<AdministrarAdapter.
             filho.set_id(mIdFilho);
             long res = mFilhoDAO.salvar(filho);
 
+
         }
+
     }
 }

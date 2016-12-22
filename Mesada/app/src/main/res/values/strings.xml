@@ -21,5 +21,8 @@
     <string name="atualizar">Atualizar Regra</string>
     <string name="title_activity_splash__screen">Splash_Screen</string>
     <string name="atualizado">Atualizado</string>
+    <string name="sobre">Sobre</string>
+    <string name="title_activity_historico">HistoricoActivity</string>
+    <string name="title_activity_new_lista_filhos">NewListaFilhos</string>
 
 </resources>
